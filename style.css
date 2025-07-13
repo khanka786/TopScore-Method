@@ -135,14 +135,26 @@ nav ul li a:hover::after {
 
 /* ---------- SERVICES SECTION ---------- */
 #services {
-  padding: 80px 10%;
+  padding: 80px 10% 100px;
   background-color: #081f3f;
+  position: relative;
+}
+
+#services::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e3b546, #d7ad46, #e3b546);
 }
 
 #services h2 {
   font-size: 36px;
   color: #e3b546;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .services-list {
@@ -453,4 +465,94 @@ form .btn2{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+/* ---------- UNIVERSAL FOOTER ---------- */
+footer {
+  background-color: #081f3f;
+  color: #ffffff;
+  padding: 50px 0 20px;
+  margin-top: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  color: #e3b546;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #e3b546;
+}
+
+.footer-contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+.footer-contact-info i {
+  color: #e3b546;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2a4a6b;
+  margin-top: 30px;
+  padding-top: 20px;
+  text-align: center;
+  color: #cccccc;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+  }
 }
