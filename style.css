@@ -231,70 +231,85 @@ nav ul li a:hover::after {
   color: #212121;
 }
 
-
 /* ---------- CONTACT SECTION ---------- */
-
 .contact-page {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  background-color: #081f3f;
 }
 
 .contact-container {
-  background-color: #081f3f;
-  padding: 50px 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Softer shadow */
-  max-width: 500px;
+  background-color: #ffffff;
+  padding: 60px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   width: 100%;
-  text-align: center;
+  max-width: 900px;
+  color: #212121;
 }
 
 .contact-container h2 {
-  color: #e3b546;;
-  font-size: 30px;
-  margin-bottom: 15px;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #081f3f;
 }
 
 .contact-container p {
-  font-size: 16px;
-  color: #e3b546;
-  margin-bottom: 35px;
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #4a4a4a;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
 form input,
 form textarea {
-  width: 100%;
-  padding: 15px 18px;
-  border: none;
-  border-radius: 10px;
-  background-color: #f5f5f5;  /* Light grey background */
-  color: #333333;             /* Dark text for readability */
-  margin-bottom: 25px;
-  font-size: 15px;
-  transition: background-color 0.3s ease, border 0.3s ease;
+  padding: 18px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #0f2a50 !important;
+  color: #ffffff !important;
+  font-size: 16px;
+  transition: border 0.3s ease, background-color 0.3s ease;
 }
 
+form textarea {
+  grid-column: span 2;
+  resize: none;
+  min-height: 120px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #cfcfcf !important;
+}
 
 form input:focus,
 form textarea:focus {
+  border: 2px solid #e3b546;
+  background-color: #173b66 !important;
+  color: #ffffff !important;
   outline: none;
-  background-color: #eeeeee;  
-  border: 2px solid #e3b546; 
-  color: #333333;  
 }
 
+
 .btn {
+  grid-column: span 2;
   background-color: #e3b546;
-  color: #cccccc;
-  padding: 14px 24px;
+  color: #fff;
+  padding: 16px 30px;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 12px;
+  font-size: 17px;
   font-weight: bold;
-  font-size: 15px;
+  cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -304,30 +319,29 @@ form textarea:focus {
 }
 
 #msg {
-  display: block;
-  margin-top: 18px;
-  font-size: 15px;
-  color: #e3b546;
+  grid-column: span 2;
+  text-align: center;
+  font-size: 16px;
+  color: #081f3f;
+  margin-top: 10px;
 }
 
 .back-btn {
+  display: inline-block;
+  margin-top: 30px;
   background-color: #ff004f;
-  border: 2px solid #ff004f;
   color: #ffffff;
-  padding: 12px 24px;
-  border-radius: 10px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
   font-weight: bold;
   font-size: 15px;
-  text-align: center;
-  display: inline-block;
   text-decoration: none;
-  margin-top: 20px;
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .back-btn:hover {
   background-color: #e60045;
-  border-color: #e60045;
   transform: translateY(-2px);
 }
 
