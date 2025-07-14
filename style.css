@@ -242,7 +242,7 @@ nav ul li a:hover::after {
 }
 
 .contact-container {
-  background-color: #ffffff;
+  background-color: #e3b546;
   padding: 60px;
   border-radius: 20px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
@@ -314,7 +314,24 @@ form textarea:focus {
 }
 
 .btn:hover {
-  background-color: #d7ad46;
+  background-color: #00915e;
+  transform: translateY(-2px);
+}
+
+.btn.btn2 {
+  background-color: #4CAF50; /* green */
+  color: #ffffff;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.btn.btn2:hover {
+  background-color: #45a049; /* slightly darker green */
   transform: translateY(-2px);
 }
 
@@ -326,21 +343,19 @@ form textarea:focus {
   margin-top: 10px;
 }
 
-.back-btn {
-  display: inline-block;
-  margin-top: 30px;
-  background-color: #ff004f;
+.btn.back-btn {
+  background-color: #e60045;
   color: #ffffff;
-  padding: 14px 28px;
+  padding: 14px 24px;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
+  cursor: pointer;
   font-weight: bold;
   font-size: 15px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
-.back-btn:hover {
+.btn.back-btn:hover {
   background-color: #e60045;
   transform: translateY(-2px);
 }
@@ -419,66 +434,6 @@ form textarea:focus {
 }
 .btn:hover{
     background: #e3b546;
-}
-
-/* ---------------contact--------------- */
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60%;
-}
-.contact-left p{
-    margin-top: 30px;
-}
-.contact-left p i{
-    color: #e3b546;
-    margin-right: 15px;
-    font-size: 25px;
-}
-.social-icons{
-    margin-top: 30px;
-}
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.social-icons a:hover{
-    color: #e3b546;
-    transform: translateY(-5px);
-}
-.btn.btn2{
-    display: inline-block;
-    background: #e3b546;
-}
-.contact-right form{
-    width: 100%;
-}
-form input, form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-#msg{
-    color: #61b752;
-    margin-top: -40px;
-    display: block;
 }
 
 /* ---------- UNIVERSAL FOOTER ---------- */
