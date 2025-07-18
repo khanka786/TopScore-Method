@@ -523,62 +523,56 @@ footer {
 
 /* ---------- TESTIMONIALS SECTION ---------- */
 .testimonials-section {
-  padding: 80px 10% 40px;
-  background-color: #f8f9fa;
-}
-
-.testimonials-section h2 {
-  text-align: center;
-  font-size: 36px;
+  padding: 80px 10%;
+  background: #f8f9fa;
   color: #081f3f;
-  margin-bottom: 50px;
-  font-weight: 600;
+  text-align: center;
 }
-
+.testimonials-section h2 {
+  color: #e3b546;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  justify-items: center;
 }
-
 .testimonial-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  color: #081f3f;
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
   border: 2px solid transparent;
 }
-
 .testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  border-color: #e3b546;
+  box-shadow: 0 8px 32px rgba(227,181,70,0.18), 0 2px 12px rgba(0,0,0,0.10);
+  transform: translateY(-6px) scale(1.03);
+  border: 2px solid #e3b546;
 }
-
 .quote-icon {
   color: #e3b546;
-  font-size: 24px;
-  margin-bottom: 15px;
-  display: block;
+  font-size: 32px;
+  margin-bottom: 18px;
 }
-
 .testimonial-quote {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333333;
-  margin-bottom: 20px;
-  font-style: italic;
-}
-
-.testimonial-author {
-  font-weight: 600;
+  font-size: 17px;
   color: #081f3f;
-  font-size: 14px;
-  text-align: right;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+.testimonial-author {
+  color: #e3b546;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
