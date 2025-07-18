@@ -427,7 +427,10 @@ form textarea:focus {
 .btn:hover{
     background: #e3b546;
 }
-
+#student-responsibility {
+    padding-top: 0px; 
+    margin-top: 0;
+}
 /* ---------- UNIVERSAL FOOTER ---------- */
 footer {
   background-color: #081f3f;
