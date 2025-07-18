@@ -1,72 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact Us - TopScore Method</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - TopScore Method</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/857594720f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="contact-page">
+  <main class="contact-page">
     <div class="contact-container">
-        <h2>Contact TopScore Method</h2>
-        <p>Have questions about our programs or services? Get in touch below!</p>
-        
-        <form name="submit-to-google-sheet">
-            <input type="text" name="Name" placeholder="Your Name" required>
-            <input type="email" name="Email" placeholder="Your Email" required>
-            <textarea name="Subject" rows="1" placeholder="Subject" required></textarea>
-            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn2">Submit</button>
-        </form>
+      <h2>Contact TopScore Method</h2>
+      <p>Have questions about our programs or services? Fill out the form below — we're happy to help!</p>
 
+      <form name="submit-to-google-sheet">
+        <div class="form-row">
+          <input type="text" name="Name" placeholder="Your Full Name" required />
+          <input type="email" name="Email" placeholder="Your Email Address" required />
+        </div>
+        <input type="text" name="Subject" placeholder="Subject" required />
+        <textarea name="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit" class="btn btn-submit">Send Message</button>
         <span id="msg"></span>
+      </form>
 
-        <!-- Back Button -->
-        <a href="index.html" class="btn back-btn">← Back to Home</a>
+      <a href="index.html" class="btn back-btn">← Back to Home</a>
     </div>
-    </div>
-    
-     <!-- Inline script to handle form submission via fetch to Google Sheets -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // URL of the deployed Google Apps Script
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyg9UFDkLj4ApmF6Ae55vymTWGnMF9E47jhGqzpR1S-rLS2l7lJHn5mnFWQRCBtMUfR/exec';
-            const form = document.forms['submit-to-google-sheet'];
-            const msg = document.getElementById("msg");
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
+  </main>
 
-            form.addEventListener('submit', e => {
-                e.preventDefault();  // Prevent normal form submission
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyg9UFDkLj4ApmF6Ae55vymTWGnMF9E47jhGqzpR1S-rLS2l7lJHn5mnFWQRCBtMUfR/exec';
+      const form = document.forms['submit-to-google-sheet'];
+      const msg = document.getElementById("msg");
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
 
-                submitButton.disabled = true;        // Disable to prevent multiple clicks
-                submitButton.textContent = "Sending...";
+      form.addEventListener('submit', e => {
+        e.preventDefault();
 
-                // Post form data to Google Apps Script
-                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(response => {
-                        // Show success message and reset form
-                        msg.textContent = "Message sent successfully!";
-                        setTimeout(() => msg.textContent = "", 5000);
-                        form.reset();
-                    })
-                    .catch(error => {
-                        // Show error message on failure
-                        msg.textContent = "An error occurred.";
-                        console.error('Error!', error.message);
-                    })
-                    .finally(() => {
-                        // Re-enable button after a delay
-                        setTimeout(() => {
-                            submitButton.disabled = false;
-                            submitButton.textContent = originalText;
-                        }, 5000);
-                    });
-            });
-        });
-    </script>
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(() => {
+            msg.textContent = "✅ Message sent successfully!";
+            setTimeout(() => msg.textContent = "", 5000);
+            form.reset();
+          })
+          .catch(error => {
+            msg.textContent = "❌ An error occurred. Please try again.";
+            console.error('Error!', error.message);
+          })
+          .finally(() => {
+            setTimeout(() => {
+              submitButton.disabled = false;
+              submitButton.textContent = originalText;
+            }, 3000);
+          });
+      });
+    });
+  </script>
 </body>
 </html>
-
