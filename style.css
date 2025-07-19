@@ -205,7 +205,7 @@ nav ul li a:hover::after {
 }
 
 /* ---------- Contact CTA Button (used outside form) ---------- */
-.btn-contact {
+a.btn.btn-contact {
   background-color: #e3b546;
   color: #081f3f;
   padding: 14px 24px;
@@ -219,7 +219,7 @@ nav ul li a:hover::after {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-contact:hover {
+a.btn.btn-contact:hover {
   background-color: #00915e;
   color: #ffffff;
   transform: translateY(-2px);
