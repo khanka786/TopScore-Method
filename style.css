@@ -621,17 +621,46 @@ footer {
 }
 
 
-/* ---------- MOBILE STYLING ---------- */
+
+/* ---------- MOBILE STYLING ONLY ---------- */
 @media (max-width: 768px) {
+  /* Stack nav vertically */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
   nav ul {
     flex-direction: column;
+    align-items: center;
     gap: 10px;
   }
 
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  /* Logo behavior */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .logo-img {
+    display: block;
+    width: 150px;
+    height: auto;
+    margin: 0 auto 10px;
+  }
+
+  /* Hero Section */
   .hero-title {
     font-size: 36px;
   }
 
+  /* Buttons */
   .btn,
   a.btn.btn-contact {
     width: 100%;
@@ -639,11 +668,36 @@ footer {
     padding: 16px;
   }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-  }
-
+  /* Form responsiveness */
   .form-row {
     flex-direction: column;
+  }
+
+  /* Footer layout */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    order: -1; /* This moves the logo above the text */
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    order: 0;
+  }
+
+  .about-image img {
+    max-width: 200px; /* Optional: resize logo for mobile */
+    height: auto;
   }
 }
