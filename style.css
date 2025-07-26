@@ -620,6 +620,23 @@ footer {
   }
 }
 
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: #e3b546;
+  color: #081f3f;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.read-more-btn:hover {
+  background: #cf9e2c;
+  color: #fff;
+}
 
 
 /* ---------- MOBILE STYLING ONLY ---------- */
