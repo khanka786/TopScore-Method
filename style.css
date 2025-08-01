@@ -718,3 +718,22 @@ footer {
     height: auto;
   }
 }
+
+.about-judy-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive handling */
+@media (min-width: 768px) {
+  .about-judy-img {
+    float: right;
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
